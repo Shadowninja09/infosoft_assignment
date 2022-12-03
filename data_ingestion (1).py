@@ -1,13 +1,11 @@
 class DataStream():
     def __init__(self):
-        """constructor which creates a timer dictionary which is empty belonging to an object"""
+#         constructor which creates a timer dictionary which is empty belonging to an object
         self.timer = dict()
 
     def should_output_data_str(self, timestamp: int, data_string: str) -> bool:
-        """if the string has never been displayed, then we add the string as key and timestamp as value to the timer
-        dictionary"""
-        """.get() method is used here because if the key does not exist in the dictionary then we get None instead of 
-        an program breaking error"""
+#         if the string has never been displayed, then we add the string as key and timestamp as value to the timerdictionary
+#         .get() method is used here because if the key does not exist in the dictionary then we get None instead of an program breaking error
         if not (self.timer.get(data_string)):
             self.timer[data_string] = timestamp
             # the string can be displayed if it has never been displayed before
